@@ -9,9 +9,9 @@ class VideoItem extends React.Component {
             <div>
                 <ul className="list-unstyled">
                     <li className="media">
-                        <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
+                        <img width={180} src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
                         <div className="media-body">
-                            <h5 className="mt-0 mb-1">{video.snippet.title}</h5>
+                            <h6 className="mt-0 mb-1 ml-1">{video.snippet.title}</h6>
                         </div>
                     </li>
                 </ul>
