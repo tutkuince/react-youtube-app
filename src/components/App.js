@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
+import VideoList from "./VideoList";
 
 class App extends React.Component {
 
@@ -30,6 +31,11 @@ class App extends React.Component {
                             <small id="searchTerm" className="form-text text-muted">
                                 I have {this.state.videos.length} videos
                             </small>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <VideoList videos={this.state.videos} />
                         </div>
                     </div>
                 </div>
