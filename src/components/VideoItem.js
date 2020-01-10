@@ -8,7 +8,7 @@ class VideoItem extends React.Component {
         return (
             <div onClick={() => this.props.onVideoSelect(video)} className="video-item">
                 <ul className="list-unstyled">
-                    <li className="media">
+                    <li className="media border rounded">
                         <img width={180} src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
                         <div className="media-body">
                             <h6 className="mt-0 mb-1 ml-1">{video.snippet.title}</h6>
