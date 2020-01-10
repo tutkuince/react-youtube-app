@@ -16,7 +16,7 @@ class App extends React.Component {
         });
 
         this.setState({
-            videos: response
+            videos: response.data.items
         });
     };
 
@@ -27,6 +27,9 @@ class App extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <SearchBar onFormSubmit={this.onTermSubmit}/>
+                            <small id="searchTerm" className="form-text text-muted">
+                                I have {this.state.videos.length} videos
+                            </small>
                         </div>
                     </div>
                 </div>

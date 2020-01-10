@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
                             }}
                             value={this.state.term}
                         />
+
                     </div>
                 </form>
             </div>
