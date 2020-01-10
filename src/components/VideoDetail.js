@@ -7,7 +7,7 @@ class VideoDetail extends React.Component {
         if (!video)
             return <div>Loading...</div>;
         return(
-            <div className="container">
+            <div className="container border rounded p-1">
                 <div className="row">
                     <div className="col col-md-12">
                         <div className="embed-responsive embed-responsive-16by9">
