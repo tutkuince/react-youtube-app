@@ -2,15 +2,11 @@ import React from "react";
 import './VideoItem.css';
 
 class VideoItem extends React.Component {
-    onVideoSelect = (video) => {
-      console.log(video);
-    };
-
     render() {
         const video = this.props.video;
 
         return (
-            <div onClick={() => this.onVideoSelect(video)} className="video-item">
+            <div onClick={() => this.props.onVideoSelect(video)} className="video-item">
                 <ul className="list-unstyled">
                     <li className="media">
                         <img width={180} src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>

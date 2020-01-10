@@ -22,6 +22,10 @@ class App extends React.Component {
         });
     };
 
+    onVideoSelect = (video) => {
+      this.setState({selectedVideo: video});
+    };
+
     render() {
         return(
             <div className="bg-light">
@@ -35,10 +39,13 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div className="row">
+                        <div className="col-md-8">
+
+                        </div>
                         <div className="col-md-4">
                             <VideoList
                                 videos={this.state.videos}
-                                onVideoSelect={this.state.selectedVideo}
+                                onVideoSelect={this.onVideoSelect}
                             />
                         </div>
                     </div>
