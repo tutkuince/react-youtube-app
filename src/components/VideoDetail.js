@@ -5,7 +5,7 @@ class VideoDetail extends React.Component {
         const video = this.props.video;
 
         if (!video)
-            return <div>Loading...</div>;
+            return <div>Search a video...</div>;
         return(
             <div className="container border rounded p-1">
                 <div className="row">
