@@ -1,4 +1,5 @@
 import React from "react";
+import './VideoItem.css';
 
 class VideoItem extends React.Component {
     render() {
@@ -6,7 +7,7 @@ class VideoItem extends React.Component {
         console.log(video);
 
         return (
-            <div>
+            <div className="video-item">
                 <ul className="list-unstyled">
                     <li className="media">
                         <img width={180} src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
