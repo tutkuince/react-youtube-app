@@ -6,7 +6,8 @@ import VideoList from "./VideoList";
 class App extends React.Component {
 
     state = {
-        videos: []
+        videos: [],
+        selectedVideo: null
     };
 
     onTermSubmit = async (term) => {
@@ -35,7 +36,10 @@ class App extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-md-4">
-                            <VideoList videos={this.state.videos} />
+                            <VideoList
+                                videos={this.state.videos}
+                                onVideoSelect={this.state.selectedVideo}
+                            />
                         </div>
                     </div>
                 </div>
