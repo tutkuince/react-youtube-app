@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
 
 class App extends React.Component {
 
@@ -33,16 +34,13 @@ class App extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <SearchBar onFormSubmit={this.onTermSubmit}/>
-                            <small id="searchTerm" className="form-text text-muted">
-                                I have {this.state.videos.length} videos
-                            </small>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-8">
-
+                        <div className="col-md-7">
+                            <VideoDetail video={this.state.selectedVideo}/>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-5">
                             <VideoList
                                 videos={this.state.videos}
                                 onVideoSelect={this.onVideoSelect}
